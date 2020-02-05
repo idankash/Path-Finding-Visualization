@@ -1,6 +1,7 @@
 # PathFinding Visualizer
 
 I built this application because I wanted to get a deeper understanding of how these algorithms work, with the help of visualizing them and see how they are "thinking". I hope that you enjoy this application as much as I did.
+You can access it here using Google Chrome: https://idankash.github.io/Path-Finding-Visualization/
 
 ## Algorithms
 
