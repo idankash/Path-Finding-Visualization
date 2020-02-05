@@ -1,0 +1,124 @@
+.outerdiv{
+    position: relative;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 1);
+    width: 50%;
+    height: 80vh;
+    border: 2px solid #34495e;
+    border-radius: 4px;
+    text-align: center;
+    left: 24.1%;
+}
+
+.tutorialwindow{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+}
+ 
+
+h3{
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+h6 {
+    margin-block-start: 2.33em;
+    margin-block-end: 2.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.skipbtn {
+    margin: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.nextbtn {
+    margin: 5px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.prevbtn {
+    margin: 5px;
+    position: absolute;
+    right: 80px;
+    bottom: 0;
+}
+
+.pmarg{
+    margin: 30px;
+}
+
+.divmarg{
+    margin: 30px;
+    text-align: left;
+    font-size: medium;
+    line-height: 30px;
+}
+
+.mappathicon{
+    width: 400px;
+    height: 400px;
+    background-image: url(../../assets/map-path.svg);
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 30%;
+}
+
+.routeicon{
+    width: 300px;
+    height: 300px;
+    background-image: url(../../assets/route.svg);
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 32%;
+}
+
+.pickalgo{
+    width: 300px;
+    height: 300px;
+    background-image: url(../../assets/Algorithms-Menu.svg);
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 33%;
+}
+
+.addwallsandweights{
+    width: 500px;
+    height: 500px;
+    background-image: url(../../assets/walls-and-weights.svg);
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 20%;
+}
+
+.movenodes{
+    width: 500px;
+    height: 500px;
+    background-image: url(../../assets/pathvis.svg);
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 20%;
+}
+
+.navbaricon{
+    width: 900px;
+    height: 100px;
+    background-image: url(../../assets/navbar.svg);
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: -27px;
+}
