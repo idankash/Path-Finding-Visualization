@@ -99,8 +99,14 @@ export class MatrixgridComponent implements OnInit {
     if(this.visualize.canvisualize==true){
       if(this.isclicked == true)
         if(this.matrix[i][j].state != state.start && this.matrix[i][j].state != state.end){
-          if(this.addweight == false)
-            this.matrix[i][j].state = this.matrix[i][j].state == state.wall ? state.empty : state.wall;
+          if(this.addweight == false){
+            if(this.matrix[i][j].state == state.weight){
+              this.matrix[i][j].state = state.wall;
+              this.matrix[i][j].value = 1;
+            }
+            else
+              this.matrix[i][j].state = this.matrix[i][j].state == state.wall ? state.empty : state.wall;
+          }
           else if(this.algorithm == algo.Dijkstra || this.algorithm == algo.AStar){
             this.matrix[i][j].state = this.matrix[i][j].state == state.weight ? state.empty : state.weight;
             this.matrix[i][j].value = this.matrix[i][j].value == 10 ? 1 : 10;
@@ -150,10 +156,13 @@ export class MatrixgridComponent implements OnInit {
       let oldstart = this.findStartNode();
       oldstart.state = state.empty;
   
-      if(this.matrix[i][j].state != state.wall && this.matrix[i][j].state != state.end)
+      if(this.matrix[i][j].state != state.wall && this.matrix[i][j].state != state.end  && this.matrix[i][j].state != state.weight && this.matrix[i][j].value != 10)
         this.matrix[i][j].state = state.start;
       else
         oldstart.state = state.start;
+    }
+    if(this.chosealgo == true){    
+      this.startVisualize(this.visualize.canvisualize, true);
     }
   }
 
@@ -163,7 +172,7 @@ export class MatrixgridComponent implements OnInit {
       let oldstart = this.findEndNode();
       oldstart.state = state.empty;
 
-      if(this.matrix[i][j].state != state.wall && this.matrix[i][j].state != state.start)
+      if(this.matrix[i][j].state != state.wall && this.matrix[i][j].state != state.start && this.matrix[i][j].state != state.weight && this.matrix[i][j].value != 10)
         this.matrix[i][j].state = state.end;
       else
         oldstart.state = state.end;
